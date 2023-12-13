@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+<h1>Best products for BEST Price</h1>
+<div class="row">
+    {% for item in store %}
+        <div class="col-md-4 mb-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ item.image }}" class="card-img-top" alt="..." style=border-radius="8px" width="200" height="200">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">€{{ item.price }} </p>
+                <a href="#" class="btn btn-primary">Įdėti į krepšelį</a>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+{% endblock %}

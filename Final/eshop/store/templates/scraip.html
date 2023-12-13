@@ -1,0 +1,32 @@
+from bs4 import BeautifulSoup
+
+html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First HTML Page</title>
+</head>
+<body>
+  <div id="first">
+    <h3 data-example="yes">hi</h3>
+    <p>more text.</p>
+  </div>
+  <ol>
+    <li class="special">This list item is special.</li>
+    <li class="special">This list item is also special.</li>
+    <li>This list item is not special.</li>
+  </ol>
+  <div data-example="yes">bye</div>
+</body>
+</html>
+"""
+
+soup = BeautifulSoup(html, "html.parser")
+print(type(soup))
+
+soup.find_all(class_='special')
+soup.select('#first')
+
+html = requests.get(<a class="ks-new-product-image" href="/p/lempute-philips-led-a60-neutrali-balta-e27-8-w-806-lm/lmz3?mtd=search&amp;pos=regular&amp;src=searchnode"><img alt="Lemputė Philips LED, A60, neutrali balta, E27, 8 W, 806 lm" src="https://ksd-images.lt/display/aikido/cache/6bedefb27bb34ea35710c7f57db9bb00.jpeg?&amp;op=fit&amp;w=748&amp;h=540"></a>)
+print(html)
